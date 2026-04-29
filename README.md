@@ -15,26 +15,7 @@ A VS Code extension for browsing and copying vanilla Minecraft Bedrock texture p
 
 ## Installation
 
-### Option A — Install from VSIX (recommended)
-
-1. Download the latest `.vsix` file from the [Releases](https://github.com/AngelGomezFine/mc-texture-browser/releases) page.
-2. In VS Code open the Command Palette (`Ctrl+Shift+P`) and run:
-   ```
-   Extensions: Install from VSIX...
-   ```
-3. Select the downloaded `.vsix` file.
-
-### Option B — Build from source
-
-```bash
-git clone <this-repo>
-cd mc-texture-browser
-npm install
-npm run compile
-npx vsce package          # creates mc-texture-browser-x.x.x.vsix
-```
-
-Then install the generated `.vsix` as shown in Option A.
+Search for **MC Texture Browser** in the VS Code Extensions panel (`Ctrl+Shift+X`) and click **Install**.
 
 ## Usage
 
@@ -51,24 +32,6 @@ The copied path is ready to paste into any Bedrock JSON file:
 
 ```json
 "texture": "textures/ui/arrow"
-```
-
-## Updating the texture list
-
-The texture list (`textures.json`) ships with the extension and is generated from the bedrock-samples tree. When Mojang releases a new Minecraft version, run:
-
-```bash
-npm run fetch-textures
-```
-
-This downloads the updated file list from GitHub and regenerates `textures.json`.
-
-## Development
-
-```bash
-npm install
-npm run compile   # compile TypeScript
-# Press F5 in VS Code to launch the Extension Development Host
 ```
 
 ## License
