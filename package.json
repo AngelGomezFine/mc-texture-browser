@@ -9,9 +9,41 @@
   },
   "categories": ["Other"],
   "keywords": ["minecraft", "bedrock", "textures", "addon", "marketplace"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AngelGomezFine/mc-texture-browser"
+  },
+  "homepage": "https://github.com/AngelGomezFine/mc-texture-browser#readme",
+  "bugs": {
+    "url": "https://github.com/AngelGomezFine/mc-texture-browser/issues"
+  },
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "mc-texture-browser-sidebar",
+          "title": "MC Texture Browser",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "mc-texture-browser-sidebar": [
+        {
+          "id": "mc-texture-browser.welcomeView",
+          "name": "MC Textures",
+          "type": "tree"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "mc-texture-browser.welcomeView",
+        "contents": "Browse and copy Minecraft Bedrock vanilla texture paths.\n\n[Open Texture Browser](command:mc-texture-browser.open)"
+      }
+    ],
     "commands": [
       {
         "command": "mc-texture-browser.open",

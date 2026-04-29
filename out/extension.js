@@ -21,6 +21,10 @@ function activate(context) {
     // Agregar al context.subscriptions es importante:
     // VS Code lo limpia automáticamente cuando se desactiva la extensión
     context.subscriptions.push(disposable);
+    context.subscriptions.push(vscode.window.registerTreeDataProvider('mc-texture-browser.welcomeView', {
+        getTreeItem: (el) => el,
+        getChildren: () => []
+    }));
 }
 function deactivate() { }
 // ─── Webview Panel ───────────────────────────────────────────────────────────
