@@ -2,14 +2,22 @@
   "name": "mc-texture-browser",
   "displayName": "MC Texture Browser",
   "description": "Browse and copy Minecraft Bedrock vanilla texture paths instantly",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "finearts",
   "engines": {
     "vscode": "^1.85.0"
   },
   "icon": "media/icon.png",
-  "categories": ["Other"],
-  "keywords": ["minecraft", "bedrock", "textures", "addon", "marketplace"],
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "minecraft",
+    "bedrock",
+    "textures",
+    "addon",
+    "marketplace"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/AngelGomezFine/mc-texture-browser"
