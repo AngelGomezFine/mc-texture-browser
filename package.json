@@ -1,0 +1,50 @@
+{
+  "name": "mc-texture-browser",
+  "displayName": "MC Texture Browser",
+  "description": "Browse and copy Minecraft Bedrock vanilla texture paths instantly",
+  "version": "0.1.0",
+  "publisher": "finearts",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "keywords": ["minecraft", "bedrock", "textures", "addon", "marketplace"],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "mc-texture-browser.open",
+        "title": "MC Texture Browser: Open",
+        "icon": "$(symbol-file)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "mc-texture-browser.open",
+        "key": "ctrl+shift+t",
+        "mac": "cmd+shift+t",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "mc-texture-browser.open",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "fetch-textures": "node scripts/fetch-textures.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}
