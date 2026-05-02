@@ -2,6 +2,8 @@
 .vscode-test/**
 node_modules/**
 scripts/**
+vgmstream/**
+.claude/**
 **/*.map
 **/*.ts
 !out/**

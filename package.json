@@ -2,7 +2,7 @@
   "name": "mc-texture-browser",
   "displayName": "MC Texture Browser",
   "description": "Browse and copy Minecraft Bedrock vanilla texture paths instantly",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "publisher": "finearts",
   "engines": {
     "vscode": "^1.85.0"
@@ -50,7 +50,7 @@
     "viewsWelcome": [
       {
         "view": "mc-texture-browser.welcomeView",
-        "contents": "Browse and copy Minecraft Bedrock vanilla texture paths.\n\n[Open Texture Browser](command:mc-texture-browser.open)"
+        "contents": "Browse and copy Minecraft Bedrock vanilla texture paths.\n\n[Open Texture Browser](command:mc-texture-browser.open)\n\n[Open Sound Browser](command:mc-texture-browser.openSounds)"
       }
     ],
     "commands": [
@@ -58,6 +58,11 @@
         "command": "mc-texture-browser.open",
         "title": "MC Texture Browser: Open",
         "icon": "$(symbol-file)"
+      },
+      {
+        "command": "mc-texture-browser.openSounds",
+        "title": "MC Sound Browser: Open",
+        "icon": "$(unmute)"
       }
     ],
     "keybindings": [
@@ -66,12 +71,22 @@
         "key": "ctrl+shift+t",
         "mac": "cmd+shift+t",
         "when": "editorTextFocus"
+      },
+      {
+        "command": "mc-texture-browser.openSounds",
+        "key": "ctrl+shift+y",
+        "mac": "cmd+shift+y",
+        "when": "editorTextFocus"
       }
     ],
     "menus": {
       "editor/title": [
         {
           "command": "mc-texture-browser.open",
+          "group": "navigation"
+        },
+        {
+          "command": "mc-texture-browser.openSounds",
           "group": "navigation"
         }
       ]
@@ -81,7 +96,10 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "fetch-textures": "node scripts/fetch-textures.js"
+    "fetch-textures": "node scripts/fetch-textures.js",
+    "fetch-sounds": "node scripts/fetch-sounds.js",
+    "convert-sounds": "node scripts/convert-sounds.js",
+    "compress-sounds": "node scripts/compress-sounds.js"
   },
   "devDependencies": {
     "@types/vscode": "^1.85.0",
