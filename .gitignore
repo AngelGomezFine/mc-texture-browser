@@ -1,1 +1,8 @@
 /node_modules/
+/dist/
+/build/
+/.env
+/.claude/
+/.vscode/
+.vscodeignore
+install.ps1
